@@ -1,0 +1,15 @@
+// COLORS
+$primary: #00A85A;
+$secondary: #EC3237;
+
+$dark: #222222;
+
+
+// SPACING
+$padding: 8;
+$margin: 8;
+
+:export {
+    primary: $primary;
+    secondary: $secondary;
+}
