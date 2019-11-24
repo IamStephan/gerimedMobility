@@ -29,7 +29,7 @@ export default class Products extends Component {
           <h1 className={`${styles['title']}`}>Products</h1>
           <Callout>
             <h2>Under Construction</h2>
-            <p style={{marginBottom: 10}}>We are currently in the procces of recreating the product page and uploading all our products to our website.</p>
+            <p style={{marginBottom: 10}}>We are currently in the process of recreating the product page and uploading all our products to our website.</p>
             <p><b>Stay Tuned</b></p>
             <br />
             <Button onClick={() => this.openPage('/contact')} variant='contained' color='secondary'>Contact Us</Button>

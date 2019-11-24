@@ -35,7 +35,7 @@ export default class Home extends Component {
                 <p className={`${styles['content']}`}>
                   Gerimed Mobility offers you a wide selection of products to help aid you in your life.
                   You can expect only the best products that are of high quality.
-                  Wether you are in need of a wheelchair or something as simple as a bed. We have it all.
+                  Whether you are in need of a wheelchair or something as simple as a bed, we have it all.
                 </p>
               </div>
 
@@ -76,7 +76,7 @@ export default class Home extends Component {
             <br />
             <Callout>
               <h2>Under Construction</h2>
-              <p style={{marginBottom: 10}}>We are currently in the procces of recreating the product page and uploading all our products to our website.</p>
+              <p style={{marginBottom: 10}}>We are currently in the process of recreating the product page and uploading all our products to our website.</p>
               <p><b>Stay Tuned</b></p>
               <br />
               <Button onClick={() => this.openPage('/contact')} variant='contained' color='secondary'>Contact Us</Button>
