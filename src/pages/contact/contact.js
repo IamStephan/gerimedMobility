@@ -76,7 +76,6 @@ export default class Contact extends Component {
                 <p>Shop 3, Madriko Centre,</p>
                 <p>Langebaan, 7357</p>
                 <br />
-                <Button variant='contained' color='primary' onClick={() => this.openPage('/langebaan')}>View</Button>
               </div>
             </div>
           </section>
