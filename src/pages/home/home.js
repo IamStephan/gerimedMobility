@@ -4,6 +4,8 @@ import { Button, ButtonGroup } from '@material-ui/core';
 import styles from './home.module.scss'
 
 import Page from '../../components/pageTemplate/pageTemplate';
+import Carousel from '../../components/carousel/carousel';
+import Callout from '../../components/callout/callout';
 
 export default class Home extends Component {
   constructor(props) {
@@ -57,7 +59,32 @@ export default class Home extends Component {
             </p>
             <br />
 
-
+            <div style={{height: 400}}>
+              <Carousel images={[
+                {src: require('../../static/IMG_6350.jpg')},
+                {src: require('../../static/IMG_6351.jpg')},
+                {src: require('../../static/IMG_6352.jpg')},
+                {src: require('../../static/IMG_6353.jpg')},
+                {src: require('../../static/IMG_6354.jpg')},
+                {src: require('../../static/IMG_6355.jpg')},
+                {src: require('../../static/IMG_6356.jpg')},
+                {src: require('../../static/IMG_6357.jpg')},
+              ]} />
+            </div>
+            <br />
+            <h2>Our Products</h2>
+            <br />
+            <Callout>
+              <h2>Under Construction</h2>
+              <p style={{marginBottom: 10}}>We are currently in the procces of recreating the product page and uploading all our products to our website.</p>
+              <p><b>Stay Tuned</b></p>
+              <br />
+              <Button onClick={() => this.openPage('/contact')} variant='contained' color='secondary'>Contact Us</Button>
+            </Callout>
+            <br />
+            <Button onClick={() => this.openPage('/products')}  variant='contained' color='primary'>
+              Our Products
+            </Button>
           </div>
         </div>
       </Page>
