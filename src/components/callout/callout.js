@@ -8,7 +8,7 @@ export default class Callout extends Component {
     return (
       <div {...this.props} className={`${styles['callout']}`}>
         <div className={`${styles['icon']}`}>
-          <Info color='primary' />
+          <Info color='secondary' />
         </div>
 
         <div className={`${styles['icon']}`}>

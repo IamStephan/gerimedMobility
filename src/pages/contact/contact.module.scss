@@ -12,22 +12,6 @@ $breakpointOne: 750;
         text-align: center;
     }
 
-    .form {
-        max-width: 700px;
-        margin: auto;
-        margin-bottom: 50px;
-
-        .fields {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .input {
-            flex: 1;
-            margin: #{$margin}px;
-        }
-    }
-
     .locations {
         .location {
             display: flex;

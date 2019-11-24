@@ -53,34 +53,38 @@ export default class Sidebar extends Component {
 
         <div className={`${styles['menu']} ${styles[open]}`}>
           <div className={styles['header']}>
-            <img alt='Gerimed logo' src={require('../../static/Gerimed_logo.png')} />
+            <img alt='Gerimed logo' src={require('../../static/Logo1.png')} />
           </div>
 
           <div className={`${styles['controls']}`}>
-            <Button 
-              variant={this.props.location.pathname === '/' ? 'contained' : 'text'}
-              color={this.props.location.pathname === '/' ? 'primary' : 'default'} 
+            <Button
+              className={`${styles['btn']}`}
+              variant={this.props.location.pathname === '/' ? 'contained' : 'outlined'}
+              color='primary'
               onClick={() => this.openPage('/')}
             >
               Home
             </Button>
-            <Button 
-              variant={this.props.location.pathname === '/services' ? 'contained' : 'text'}
-              color={this.props.location.pathname === '/services' ? 'primary' : 'default'}
-              onClick={() => this.openPage('/services')}
+            <Button
+              className={`${styles['btn']}`}
+              variant={this.props.location.pathname === '/products' ? 'contained' : 'outlined'}
+              color='primary'
+              onClick={() => this.openPage('/products')}
             >
-              Services
+              Our Products
             </Button>
-            <Button 
-              variant={this.props.location.pathname === '/about' ? 'contained' : 'text'}
-              color={this.props.location.pathname === '/about' ? 'primary' : 'default'}
+            <Button
+              className={`${styles['btn']}`}
+              variant={this.props.location.pathname === '/about' ? 'contained' : 'outlined'}
+              color='primary'
               onClick={() => this.openPage('/about')}
             >
               About Us
             </Button>
-            <Button 
-              variant={this.props.location.pathname === '/contact' ? 'contained' : 'text'}
-              color={this.props.location.pathname === '/contact' ? 'primary' : 'default'}
+            <Button
+              className={`${styles['btn']}`}
+              variant={this.props.location.pathname === '/contact' ? 'contained' : 'outlined'}
+              color='primary'
               onClick={() => this.openPage('/contact')}
             >
               Contact Us

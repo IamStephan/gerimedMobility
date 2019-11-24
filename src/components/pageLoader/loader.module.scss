@@ -30,7 +30,7 @@ $animDur: 500;
         position: absolute;
         left: calc(50% - #{$loaderSize / 2}px);
         top: calc(50% - #{$loaderSize / 2}px);
-        border: solid #{$loaderBorder}px $primary;
+        border: solid #{$loaderBorder}px $secondary;
         border-bottom-color: transparent;
         border-left-color: transparent;
         border-right-color: transparent;

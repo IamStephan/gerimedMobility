@@ -6,7 +6,6 @@ import { observer, inject } from 'mobx-react';
 import styles from './topbar.module.scss'
 
 import Sidebar from '../sidebar/sidebar'
-import logo from '../../static/Gerimed_logo.png';
 
 @inject('AppStore')
 @withRouter
@@ -45,39 +44,39 @@ export default class TopBar extends Component {
     return (
       <nav className={`${styles['topbar']}`}>
         <div className={`${styles['logo']}`}>
-          <img alt='gerimed' className={`${styles['img']}`} src={logo} />
+          <img alt='gerimed' className={`${styles['img']}`} src={require('../../static/Logo1.png')} />
         </div>
 
         {
           this.state.windowWidth > styles.breakpointTwo ? (
             <div className={`${styles['navigationDesktop']}`}>
               <Button 
-                variant={this.props.location.pathname === '/' ? 'contained' : 'text'}
-                color={this.props.location.pathname === '/' ? 'primary' : 'default'} 
+                variant={this.props.location.pathname === '/' ? 'contained' : 'outlined'}
+                color='primary'
                 onClick={() => this.openPage('/')}
                 style={{margin: 10}}
               >
                 Home
               </Button>
               <Button 
-                variant={this.props.location.pathname === '/services' ? 'contained' : 'text'}
-                color={this.props.location.pathname === '/services' ? 'primary' : 'default'}
-                onClick={() => this.openPage('/services')}
+                variant={this.props.location.pathname === '/products' ? 'contained' : 'outlined'}
+                color='primary'
+                onClick={() => this.openPage('/products')}
                 style={{margin: 10}}
               >
-                Services
+                Our Products
               </Button>
               <Button 
-                variant={this.props.location.pathname === '/about' ? 'contained' : 'text'}
-                color={this.props.location.pathname === '/about' ? 'primary' : 'default'}
+                variant={this.props.location.pathname === '/about' ? 'contained' : 'outlined'}
+                color='primary'
                 onClick={() => this.openPage('/about')}
                 style={{margin: 10}}
               >
                 About Us
               </Button>
               <Button 
-                variant={this.props.location.pathname === '/contact' ? 'contained' : 'text'}
-                color={this.props.location.pathname === '/contact' ? 'primary' : 'default'}
+                variant={this.props.location.pathname === '/contact' ? 'contained' : 'outlined'}
+                color='primary'
                 onClick={() => this.openPage('/contact')}
                 style={{margin: 10}}
               >
@@ -90,7 +89,7 @@ export default class TopBar extends Component {
                 fullWidth
                 variant='contained'
                 color='primary'
-                onClick={() => AppStore.openSidebar()}>Menu</Button>
+                onClick={() => AppStore.openSidebar()}>Open Menu</Button>
             </div>
           )
         }

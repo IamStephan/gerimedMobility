@@ -14,18 +14,13 @@ import Loader from './components/pageLoader/loader'
 
 import AppStore from './stores/appStore'
 
-const Construction = Loadable({
-  loader: () => import('./pages/construction/construction'),
-  loading: Loader
-})
-
 const Home = Loadable({
   loader: () => import('./pages/home/home'),
   loading: Loader
 })
 
-const Services = Loadable({
-  loader: () => import('./pages/services/services'),
+const Products = Loadable({
+  loader: () => import('./pages/products/products'),
   loading: Loader
 })
 
@@ -39,25 +34,16 @@ const Contact = Loadable({
   loading: Loader
 })
 
-const Langebaan = Loadable({
-  loader: () => import('./pages/langebaan/langebaan'),
-  loading: Loader
-})
-
-const Kleinmond = Loadable({
-  loader: () => import('./pages/kleinmond/kleinmond'),
-  loading: Loader
-})
-
 const stores = {
   AppStore
 }
 
 const theme = createMuiTheme({
   palette: {
+    type: 'dark',
     primary: {
       main: globals.primary,
-      contrastText: 'white',
+      contrastText: '#212121',
     },
     secondary: {
       main: globals.secondary,
@@ -71,7 +57,7 @@ export default class Global extends Component {
     return (
       <Fragment>
         <Helmet>
-          <title>Gerimed</title>
+          <title>Gerimed Mobility</title>
         </Helmet>
 
         <StoreProvider {...stores}>
@@ -81,12 +67,9 @@ export default class Global extends Component {
               <Topbar />
               <Switch>
                 <Route component={Home} exact path='/' />
-                <Route component={Services} exact path='/services' />
+                <Route component={Products} exact path='/products' />
                 <Route component={About} exact path='/about' />
                 <Route component={Contact} exact path='/contact' />
-                <Route component={Langebaan} exact path='/langebaan' />
-                <Route component={Kleinmond} exact path='/kleinmond' />
-                <Route component={Construction} />
               </Switch>
               <Footer />
             </Router>

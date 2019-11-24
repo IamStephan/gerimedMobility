@@ -1,16 +1,17 @@
 @import '../../utils/globals.scss';
 
-$topbarHeight: 145;
+$topbarHeight: 120;
 $breakpointOne: 1100;
-$breakpointTwo: 450;
+$breakpointTwo: 550;
 
 .topbar {
     padding: 50px;
     display: flex;
     justify-content: space-between;
+    background-color: $dark;
 
     .logo {
-        max-width: 500px;
+        max-width: 400px;
         width: 100%;
         height: #{$topbarHeight}px;
         position: relative;

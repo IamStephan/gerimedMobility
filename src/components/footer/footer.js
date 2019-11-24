@@ -16,12 +16,17 @@ export default class Footer extends Component {
     }
 
     this.openPage = this.openPage.bind(this)
+    this.openTab = this.openTab.bind(this)
     this.closeDialog = this.closeDialog.bind(this)
     this.openDialog = this.openDialog.bind(this)
   }
 
   openPage(url) {
     this.props.history.push(url)
+  }
+ 
+  openTab(url) {
+    window.open(url)
   }
 
   closeDialog() {
@@ -54,7 +59,7 @@ export default class Footer extends Component {
             <p>Tel: 022 772 1273</p>
             <p>Cell: 082 079 4173</p>
             <br />
-            <Button variant='contained' color='primary'>Visit shop</Button>
+            <Button variant='contained' color='primary' onClick={() => this.openPage('/about')}>Learn More</Button>
           </section>
           <section className={`${styles['section']}`}>
             <h2>Gerimed Langebaan</h2>
@@ -64,7 +69,7 @@ export default class Footer extends Component {
             <p>Tel: 022 772 1252 / 2385</p>
             <p>Fax: 022 772 2061</p>
             <br />
-            <Button variant='contained' color='primary' onClick={() => this.openPage('/langebaan')}>Learn more</Button>
+            <Button variant='contained' color='primary' onClick={() => this.openTab('https://gerimed.netlify.com')}>Visit Gerimed</Button>
           </section>
           <section className={`${styles['section']}`}>
             <h2>Gerimed Kleinmond</h2>
@@ -74,7 +79,7 @@ export default class Footer extends Component {
             <p>Tel: 028 271 3994</p>
             <p>Fax: 028 271 3488</p>
             <br />
-            <Button variant='contained' color='primary' onClick={() => this.openPage('/kleinmond')}>Learn more</Button>
+            <Button variant='contained' color='primary' onClick={() => this.openTab('https://gerimed.netlify.com')}>Visit Gerimed</Button>
           </section>
         </div>
 
@@ -82,7 +87,7 @@ export default class Footer extends Component {
 
         <div className={`${styles['more-info']}`}>
           <section className={`${styles['section']}`}>
-            <Button variant='text' color='inherit'>© Gerimed 2019</Button>
+            <Button variant='text' color='inherit'>© Gerimed Mobility 2019</Button>
             <Button variant='text' color='inherit'>Sitemap</Button>
           </section>
           <Button variant='contained' color='primary' onClick={this.openDialog}>Newsletter</Button>

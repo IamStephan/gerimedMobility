@@ -19,55 +19,45 @@ export default class Home extends Component {
   render() {
     return (
       <Page
-        title='Gerimed'
-        description='Gerimed Landing Page'
+        title='Gerimed Mobility'
+        description='Gerimed Mobility Landing Page'
       >
         <div className={`${styles['home']}`}>
           <div className={`${styles['hero']}`}>
             <div className={`${styles['left']}`}>
-              <img alt='Home' src={require('../../static/pexels-photo-home.webp')} />
-            </div>
-            <div className={`${styles['right']}`}>
-              <div className={`${styles['top']}`}>
-                <h2 className={`${styles['title']}`}>
-                  Personal, Private Care
-                </h2>
+              <div className={`${styles['info']}`}>
+                <h1 className={`${styles['title']}`}>
+                  High Quality Products
+                </h1>
 
                 <p className={`${styles['content']}`}>
-                  Gerimed is a privately owned health care company
-                  and leaders at elderly health care in the Western
-                  Cape of South Africa
+                  Gerimed Mobility offers you a wide selection of products to help aid you in your life.
+                  You can expect only the best products that are of high quality.
+                  Wether you are in need of a wheelchair or something as simple as a bed. We have it all.
                 </p>
-                <br />
-                <Button onClick={() => this.openPage('/about')} variant='contained' color='primary'>Learn More</Button>
               </div>
-              <div className={`${styles['bottom']}`}>
-                <h2 className={`${styles['title']}`}>Find your home:</h2>
-                <ButtonGroup variant='contained' color='primary' fullWidth>
-                  <Button onClick={() => this.openPage('/langebaan')}>Langebaan</Button>
-                  <Button onClick={() => this.openPage('/kleinmond')}>Kleinmond</Button>
+
+              <div className={`${styles['actions']}`}>
+                <ButtonGroup variant='outlined' color='primary'>
+                  <Button onClick={() => this.openPage('/products')}>Browse Products</Button>
+                  <Button onClick={() => this.openPage('/contact')}>Contact Us</Button>
                 </ButtonGroup>
               </div>
             </div>
+            <div className={`${styles['right']}`}>
+              <img alt='Lady in a wheelchair' src={require('../../static/hero1.webp')} />
+            </div>
           </div>
 
-          <div className={`${styles['ass']}`}>
-            <h2 className={`${styles['title']}`}>In association with:</h2>
+          <div className={`${styles['more-info']}`}>
+            <h2>Welcome to Gerimed Mobility</h2>
+            <br />
+            <p>
+            Gerimed Mobility strives to target the mobility needs of the elderly and to offer high quality products and good service at the best possible price.  Gerimed Mobility is situated in Langebaan, however we can supply customers all over the West Coast of South Africa.
+            </p>
+            <br />
 
-            <div className={`${styles['content']}`}>
-              <div className={`${styles['logo']}`}>
-                <img alt='sa_dep' src={require('../../static/sa_dep.jpg')} />
-              </div>
-              <div className={`${styles['logo']}`}>
-                <img alt='alz' src={require('../../static/alz.jfif')} />
-              </div>
-              <div className={`${styles['logo']}`}>
-                <img alt='bhf' src={require('../../static/bhf.jpg')} />
-              </div>
-              <div className={`${styles['logo']}`}>
-                <img alt='saaa' src={require('../../static/saaa.png')} />
-              </div>
-            </div>
+
           </div>
         </div>
       </Page>

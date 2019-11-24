@@ -1,6 +1,6 @@
 {
-  "short_name": "Gerimed",
-  "name": "Gerimed is a privately owned health care company and leaders at elderly health care in the Western Cape of South Africa. Consisting out of two Health Care Centres: Gerimed Kleinmond and Gerimed Langebaan.",
+  "short_name": "Gerimed Mobility",
+  "name": "Aiding you, to live a beter life.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#00A85A",
+  "theme_color": "#FFFF01",
   "background_color": "#000000"
 }
