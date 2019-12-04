@@ -67,11 +67,11 @@ export default class Sidebar extends Component {
             </Button>
             <Button
               className={`${styles['btn']}`}
-              variant={this.props.location.pathname === '/products' ? 'contained' : 'outlined'}
+              variant={this.props.location.pathname === '/shop' ? 'contained' : 'outlined'}
               color='primary'
-              onClick={() => this.openPage('/products')}
+              onClick={() => this.openPage('/shop')}
             >
-              Our Products
+              Our Shop
             </Button>
             <Button
               className={`${styles['btn']}`}

@@ -1,0 +1,30 @@
+@import '../../utils/globals.scss';
+
+$breakpointOne: 560;
+$cardWidth: 300;
+
+.services {
+    max-width: 980px;
+    margin: auto;
+    padding: #{$padding * 2}px;
+
+    .title {
+        padding-bottom: 25px;
+        text-align: center;
+    }
+
+    .grid {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+
+        .card {
+            min-width: #{$cardWidth}px;
+            max-width: #{$cardWidth}px;
+            width: #{$cardWidth}px;
+            flex: 1;
+            margin: #{$margin}px;
+        }
+    }
+}

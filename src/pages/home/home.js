@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import { Button, ButtonGroup } from '@material-ui/core';
+import React, { Component, Fragment } from 'react';
+import { Button, ButtonGroup, Card, CardContent, CardMedia, CardActionArea, CardActions } from '@material-ui/core';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import styles from './home.module.scss'
 
@@ -7,15 +8,37 @@ import Page from '../../components/pageTemplate/pageTemplate';
 import Carousel from '../../components/carousel/carousel';
 import Callout from '../../components/callout/callout';
 
+const heroCallouts = [
+  {
+    title: 'High Quality Products',
+    text: 'Gerimed Mobility offers you a wide selection of products to help aid you in your life. You can expect only the best products that are of high quality. Whether you are in need of a wheelchair or something as simple as a bed, we have it all.'
+  },
+  {
+    title: 'Affordable Rentals',
+    text: 'When you are in need of equipment but they are only temporary, Gerimed Mobility not only provides you with the option to rent but also at an affordable rate.'
+  }
+]
+
 export default class Home extends Component {
   constructor(props) {
     super(props)
 
+    this.state = {
+      hero: {
+        calloutIndex: 0
+      }
+    }
+
     this.openPage = this.openPage.bind(this)
+    this.openItem = this.openItem.bind(this)
   }
 
   openPage(url) {
     this.props.history.push(url)
+  }
+
+  openItem(url) {
+    window.open(url)
   }
 
   render() {
@@ -28,15 +51,14 @@ export default class Home extends Component {
           <div className={`${styles['hero']}`}>
             <div className={`${styles['left']}`}>
               <div className={`${styles['info']}`}>
-                <h1 className={`${styles['title']}`}>
-                  High Quality Products
-                </h1>
-
-                <p className={`${styles['content']}`}>
-                  Gerimed Mobility offers you a wide selection of products to help aid you in your life.
-                  You can expect only the best products that are of high quality.
-                  Whether you are in need of a wheelchair or something as simple as a bed, we have it all.
-                </p>
+                <div className={`${styles['callout']}`}>
+                  <h1 className={`${styles['title']}`}>
+                    High Quality Products
+                  </h1>
+                  <p className={`${styles['content']}`}>
+                    Gerimed Mobility offers you a wide selection of products to help aid you in your life. You can expect only the best products that are of high quality. Whether you are in need of a wheelchair or something as simple as a bed, we have it all.
+                  </p>
+                </div>
               </div>
 
               <div className={`${styles['actions']}`}>
@@ -72,18 +94,40 @@ export default class Home extends Component {
               ]} />
             </div>
             <br />
-            <h2>Our Products</h2>
+            <h2>Our Featured Products</h2>
             <br />
-            <Callout>
-              <h2>Under Construction</h2>
-              <p style={{marginBottom: 10}}>We are currently in the process of recreating the product page and uploading all our products to our website.</p>
-              <p><b>Stay Tuned</b></p>
-              <br />
-              <Button onClick={() => this.openPage('/contact')} variant='contained' color='secondary'>Contact Us</Button>
-            </Callout>
+            <section className={`${styles['products']}`}>
+              {
+                [
+                  {title: 'Mobility & Aids', src: require('../../static/production/mobilityaids.jpg'), pdf: 'pdf/mobility.pdf'},
+                  {title: 'Wheelchairs Aluminium Frames', src: require('../../static/production/wheelchairsaluminium.jpg'), pdf: 'pdf/wheelchairsaluminium.pdf'},
+                  {title: 'Wheelchairs Metal Frames', src: require('../../static/production/wheelchairsmetal.jpg'), pdf: 'pdf/wheelchairsmetal.pdf'},
+                ].map((item, i) => (
+                  <Card elevation={5} className={`${styles['card']}`} key={i}>
+                    <CardContent className={`${styles['media']}`}>
+                      <img src={item.src} />
+                    </CardContent>
+                    
+                    <CardContent className={`${styles['content']}`}>
+                      <h3 className={`${styles['title']}`}>
+                        {item.title}
+                      </h3>
+                    </CardContent>
+
+                    <CardActions>
+                      <Button fullWidth variant='contained' color='secondary' onClick={() => {
+                        this.openItem(__dirname + item.pdf)
+                      }}>
+                        Download PDF
+                      </Button>
+                    </CardActions>
+                  </Card>
+                ))
+              }
+            </section>
             <br />
-            <Button onClick={() => this.openPage('/products')}  variant='contained' color='primary'>
-              Our Products
+            <Button onClick={() => this.openPage('/shop')}  variant='contained' color='primary'>
+              View All Products
             </Button>
           </div>
         </div>

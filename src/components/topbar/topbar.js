@@ -59,12 +59,12 @@ export default class TopBar extends Component {
                 Home
               </Button>
               <Button 
-                variant={this.props.location.pathname === '/products' ? 'contained' : 'outlined'}
+                variant={this.props.location.pathname === '/shop' ? 'contained' : 'outlined'}
                 color='primary'
-                onClick={() => this.openPage('/products')}
+                onClick={() => this.openPage('/shop')}
                 style={{margin: 10}}
               >
-                Our Products
+                Our Shop
               </Button>
               <Button 
                 variant={this.props.location.pathname === '/about' ? 'contained' : 'outlined'}

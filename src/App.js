@@ -19,8 +19,8 @@ const Home = Loadable({
   loading: Loader
 })
 
-const Products = Loadable({
-  loader: () => import('./pages/products/products'),
+const Shop = Loadable({
+  loader: () => import('./pages/shop/shop'),
   loading: Loader
 })
 
@@ -67,7 +67,7 @@ export default class Global extends Component {
               <Topbar />
               <Switch>
                 <Route component={Home} exact path='/' />
-                <Route component={Products} exact path='/products' />
+                <Route component={Shop} exact path='/shop' />
                 <Route component={About} exact path='/about' />
                 <Route component={Contact} exact path='/contact' />
               </Switch>
