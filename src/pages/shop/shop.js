@@ -5,7 +5,6 @@ import { withRouter } from 'react-router-dom';
 import styles from './shop.module.scss'
 
 import Page from '../../components/pageTemplate/pageTemplate';
-import Callout from '../../components/callout/callout';
 
 @withRouter
 export default class Shop extends Component {

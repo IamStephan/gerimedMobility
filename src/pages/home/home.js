@@ -1,23 +1,10 @@
-import React, { Component, Fragment } from 'react';
-import { Button, ButtonGroup, Card, CardContent, CardMedia, CardActionArea, CardActions } from '@material-ui/core';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import React, { Component } from 'react';
+import { Button, ButtonGroup, Card, CardContent, CardActions } from '@material-ui/core';
 
 import styles from './home.module.scss'
 
 import Page from '../../components/pageTemplate/pageTemplate';
 import Carousel from '../../components/carousel/carousel';
-import Callout from '../../components/callout/callout';
-
-const heroCallouts = [
-  {
-    title: 'High Quality Products',
-    text: 'Gerimed Mobility offers you a wide selection of products to help aid you in your life. You can expect only the best products that are of high quality. Whether you are in need of a wheelchair or something as simple as a bed, we have it all.'
-  },
-  {
-    title: 'Affordable Rentals',
-    text: 'When you are in need of equipment but they are only temporary, Gerimed Mobility not only provides you with the option to rent but also at an affordable rate.'
-  }
-]
 
 export default class Home extends Component {
   constructor(props) {
@@ -63,7 +50,7 @@ export default class Home extends Component {
 
               <div className={`${styles['actions']}`}>
                 <ButtonGroup variant='outlined' color='primary'>
-                  <Button onClick={() => this.openPage('/products')}>Browse Products</Button>
+                  <Button onClick={() => this.openPage('/shop')}>View Our Shop</Button>
                   <Button onClick={() => this.openPage('/contact')}>Contact Us</Button>
                 </ButtonGroup>
               </div>
@@ -105,7 +92,7 @@ export default class Home extends Component {
                 ].map((item, i) => (
                   <Card elevation={5} className={`${styles['card']}`} key={i}>
                     <CardContent className={`${styles['media']}`}>
-                      <img src={item.src} />
+                      <img alt={item.title} src={item.src} />
                     </CardContent>
                     
                     <CardContent className={`${styles['content']}`}>
@@ -126,7 +113,7 @@ export default class Home extends Component {
               }
             </section>
             <br />
-            <Button onClick={() => this.openPage('/shop')}  variant='contained' color='primary'>
+            <Button onClick={() => this.openPage('/products')}  variant='contained' color='primary'>
               View All Products
             </Button>
           </div>
