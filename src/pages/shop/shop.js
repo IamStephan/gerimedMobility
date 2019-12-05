@@ -57,7 +57,7 @@ export default class Shop extends Component {
               </CardContent>
 
               <CardContent className={`${styles['content']}`}>
-                Not only do we sell High quality products but we rent them out as well. When you are in need of temporary equipment you can contact us directly or simply fill out 'easy-to-use' online form.
+                Not only do we sell High quality products but we rent them out as well. When you are in need of temporary equipment you can contact us directly or simply fill in our 'easy-to-use' online form.
               </CardContent>
 
               <CardActions>
