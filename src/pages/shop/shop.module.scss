@@ -15,16 +15,43 @@ $cardWidth: 300;
 
     .grid {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-content: center;
         flex-wrap: wrap;
 
         .card {
-            min-width: #{$cardWidth}px;
-            max-width: #{$cardWidth}px;
-            width: #{$cardWidth}px;
-            flex: 1;
-            margin: #{$margin}px;
+            background-color: white;
+            margin: 50px;
+            margin-top: 0px;
+            color: $dark;
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+
+            .media {
+                height: 150px;
+                position: relative;
+                margin: #{$padding * 2}px;
+                width: 100%;
+
+                img {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .head {
+                text-align: center;
+            }
+
+            .content {
+                flex: 1;
+                text-align: center;
+            }
         }
     }
 }

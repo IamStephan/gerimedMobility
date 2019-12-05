@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Card, CardContent } from '@material-ui/core';
+import { Button, Card, CardContent, CardActions } from '@material-ui/core';
 import { withRouter } from 'react-router-dom';
 
 import styles from './shop.module.scss'
@@ -27,26 +27,44 @@ export default class Shop extends Component {
         <div className={`${styles['services']}`}>
           <h1 className={`${styles['title']}`}>Our Shop</h1>
           <section className={`${styles['grid']}`}>
-            <Card className={`${styles['card']}`}>
+            <Card elevation={5} className={`${styles['card']}`}>
               <CardContent>
-                <h2>Products</h2>
+                <h2 className={`${styles['head']}`}>Products</h2>
               </CardContent>
-              <CardContent>
-                <Button variant='contained' color='primary' fullWidth>
+
+              <CardContent className={`${styles['media']}`}>
+                <img alt='Alunimium Wheel Chairs' src={require('../../static/production/wheelchairsaluminium.jpg')} />
+              </CardContent>
+
+              <CardContent className={`${styles['content']}`}>
+                Here at Gerimed Mobility We sell a wide variety of products that are aimed at aiding you. From sports injuries or simply preventing bedsores.
+              </CardContent>
+
+              <CardActions>
+                <Button variant='contained' color='secondary' fullWidth onClick={() => this.openPage('/products')}>
                   View Products
                 </Button>
-              </CardContent>
+              </CardActions>
             </Card>
             
-            <Card className={`${styles['card']}`}>
+            <Card elevation={5} className={`${styles['card']}`}>
               <CardContent>
-                <h2>Products</h2>
+                <h2 className={`${styles['head']}`}>Rentals</h2>
               </CardContent>
-              <CardContent>
-                <Button variant='contained' color='primary' fullWidth>
-                  View Products
+
+              <CardContent className={`${styles['media']}`}>
+                <img alt='Bedsore prevention' src={require('../../static/production/bedsoreprevention.jpg')} />
+              </CardContent>
+
+              <CardContent className={`${styles['content']}`}>
+                Not only do we sell High quality products but we rent them out as well. When you are in need of temporary equipment you can contact us directly or simply fill out 'easy-to-use' online form.
+              </CardContent>
+
+              <CardActions>
+                <Button variant='contained' color='secondary' fullWidth onClick={() => this.openPage('/contact')}>
+                  Contact Us
                 </Button>
-              </CardContent>
+              </CardActions>
             </Card>
           </section>
         </div>

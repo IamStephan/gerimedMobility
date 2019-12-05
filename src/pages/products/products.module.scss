@@ -27,7 +27,7 @@ $cardWidth: 300;
             .media {
                 height: 150px;
                 position: relative;
-                padding: #{$padding}px;
+                margin: #{$margin * 2}px;
 
                 img {
                     position: absolute;
@@ -40,7 +40,7 @@ $cardWidth: 300;
             .content {
                 flex: 1;
 
-                .title {
+                .head {
                     text-align: center;
                 }
             }

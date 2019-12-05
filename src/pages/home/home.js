@@ -96,7 +96,7 @@ export default class Home extends Component {
                     </CardContent>
                     
                     <CardContent className={`${styles['content']}`}>
-                      <h3 className={`${styles['title']}`}>
+                      <h3 className={`${styles['head']}`}>
                         {item.title}
                       </h3>
                     </CardContent>

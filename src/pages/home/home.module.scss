@@ -75,7 +75,7 @@ $transitionMs: 500;
                 .media {
                     height: 150px;
                     position: relative;
-                    padding: #{$padding}px;
+                    margin: #{$margin * 2}px;
 
                     img {
                         position: absolute;
@@ -88,7 +88,7 @@ $transitionMs: 500;
                 .content {
                     flex: 1;
 
-                    .title {
+                    .head {
                         text-align: center;
                     }
                 }
