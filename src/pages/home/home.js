@@ -56,7 +56,7 @@ export default class Home extends Component {
               </div>
             </div>
             <div className={`${styles['right']}`}>
-              <img alt='Lady in a wheelchair' src={require('../../static/hero1.webp')} />
+              <img alt='Lady in a wheelchair' src={require('../../static/hero1.jpg')} />
             </div>
           </div>
 

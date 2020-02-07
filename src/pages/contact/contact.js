@@ -64,7 +64,7 @@ export default class Contact extends Component {
           <section className={`${styles['locations']}`}>
             <div className={`${styles['location']}`}>
               <div className={`${styles['map']}`}>
-              <iframe title='Gerimed Mobility' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26746.921993651864!2d18.03171409468278!3d-33.07317421427836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c34ab5b010473d9%3A0x2f27225f2cd0e231!2sGerimed%20Mobility!5e0!3m2!1sen!2sza!4v1574623516728!5m2!1sen!2sza" />
+              <iframe title='Gerimed Mobility' src="https://www.google.com/maps/d/embed?mid=1Nl7vw5ohRyj3EKKfffbQHPmlwV-zY5gT" />
               </div>
               <div className={`${styles['content']}`}>
                 <h2>
@@ -73,7 +73,7 @@ export default class Contact extends Component {
                 <br />
                 <p>Tel: 022 772 1273</p>
                 <p>Cell: 082 079 4173</p>
-                <p>Shop 3, Madriko Centre,</p>
+                <p>844@Oostewal Building, Oostewal Rd</p>
                 <p>Langebaan, 7357</p>
                 <br />
               </div>
