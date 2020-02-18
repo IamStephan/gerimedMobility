@@ -61,6 +61,40 @@ $transitionMs: 500;
         margin: auto;
         padding: #{$padding * 2}px;
 
+        .carousel-con {
+            position: relative;
+
+            .slide-img {
+                object-fit: cover;
+            }
+
+            .btn-next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 10px;
+            }
+            .btn-back {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 10px;
+            }
+
+            .btn-control {
+                appearance: none;
+                padding: 5px;
+                border: none;
+                background-color: $secondary;
+                color: white;
+                border-radius: 99px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
         .products {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

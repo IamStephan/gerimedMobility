@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { Button, ButtonGroup, Card, CardContent, CardActions } from '@material-ui/core';
+import { ChevronLeft, ChevronRight } from '@material-ui/icons';
+import { CarouselProvider, Slider, Slide, Image, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
 import styles from './home.module.scss'
 
 import Page from '../../components/pageTemplate/pageTemplate';
-import Carousel from '../../components/carousel/carousel';
 
 export default class Home extends Component {
   constructor(props) {
@@ -68,17 +70,42 @@ export default class Home extends Component {
             </p>
             <br />
 
-            <div style={{height: 400}}>
-              <Carousel images={[
-                {src: require('../../static/IMG_6350.jpg')},
-                {src: require('../../static/IMG_6351.jpg')},
-                {src: require('../../static/IMG_6352.jpg')},
-                {src: require('../../static/IMG_6353.jpg')},
-                {src: require('../../static/IMG_6354.jpg')},
-                {src: require('../../static/IMG_6355.jpg')},
-                {src: require('../../static/IMG_6356.jpg')},
-                {src: require('../../static/IMG_6357.jpg')},
-              ]} />
+            <div>
+              <CarouselProvider
+                naturalSlideWidth={16}
+                naturalSlideHeight={9}
+                totalSlides={5}
+                infinite
+              >
+                <div className={styles['carousel-con']}>
+                  <Slider>
+                    <Slide>
+                      <Image className={styles['slide-img']} src={require('../../static/store_new/home_1.jpeg')} />
+                    </Slide>
+                    <Slide>
+                      <Image className={styles['slide-img']} src={require('../../static/store_new/home_2.jpeg')} />
+                    </Slide>
+                    <Slide>
+                      <Image className={styles['slide-img']} src={require('../../static/store_new/home_3.jpeg')} />
+                    </Slide>
+                    <Slide>
+                      <Image className={styles['slide-img']} src={require('../../static/store_new/home_4.jpeg')} />
+                    </Slide>
+                    <Slide>
+                      <Image className={styles['slide-img']} src={require('../../static/store_new/home_5.jpeg')} />
+                    </Slide>
+                    
+                  </Slider>
+
+                  <ButtonNext className={`${styles['btn-next']} ${styles['btn-control']}`}>
+                    <ChevronRight fontSize='large' />
+                  </ButtonNext>
+
+                  <ButtonBack className={`${styles['btn-back']} ${styles['btn-control']}`}>
+                    <ChevronLeft fontSize='large' />
+                  </ButtonBack>
+                </div>
+              </CarouselProvider>
             </div>
             <br />
             <h2>Our Featured Products</h2>
