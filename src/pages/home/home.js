@@ -7,6 +7,7 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 import styles from './home.module.scss'
 
 import Page from '../../components/pageTemplate/pageTemplate';
+import Callout from '../../components/callout/callout';
 
 export default class Home extends Component {
   constructor(props) {
@@ -63,10 +64,18 @@ export default class Home extends Component {
           </div>
 
           <div className={`${styles['more-info']}`}>
+            <br/>
+            <Callout style={{marginBottom: 25}}>
+              <h2>We are open during lockdown</h2>
+              <p style={{marginBottom: 10}}>
+                Gerimed mobility is registered as an essential business.
+              </p>
+            </Callout>
+
             <h2>Welcome to Gerimed Mobility</h2>
             <br />
             <p>
-            Gerimed Mobility strives to target the mobility needs of the elderly and to offer high quality products and good service at the best possible price.  Gerimed Mobility is situated in Langebaan, however we can supply customers all over the West Coast of South Africa.
+              Gerimed Mobility strives to target the mobility needs of the elderly and to offer high quality products and good service at the best possible price.  Gerimed Mobility is situated in Langebaan, however we can supply customers all over the West Coast of South Africa.
             </p>
             <br />
 
@@ -76,11 +85,12 @@ export default class Home extends Component {
                 naturalSlideHeight={9}
                 totalSlides={5}
                 infinite
+                isPlaying={false}
               >
                 <div className={styles['carousel-con']}>
                   <Slider>
                     <Slide>
-                      <Image className={styles['slide-img']} src={require('../../static/store_new/home_1.jpeg')} />
+                      <Image className={styles['slide-img-promo']} src={require('../../static/promotion.jpeg')} />
                     </Slide>
                     <Slide>
                       <Image className={styles['slide-img']} src={require('../../static/store_new/home_2.jpeg')} />

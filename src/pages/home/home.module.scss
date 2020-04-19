@@ -68,6 +68,10 @@ $transitionMs: 500;
                 object-fit: cover;
             }
 
+            .slide-img-promo {
+                object-fit: contain;
+            }
+
             .btn-next {
                 position: absolute;
                 top: 50%;
